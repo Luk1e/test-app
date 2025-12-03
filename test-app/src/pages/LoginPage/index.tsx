@@ -1,5 +1,5 @@
 // React & libraries
-import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Store & hooks
 import { useAuth } from "../../context/AuthContext";
@@ -8,13 +8,16 @@ import { useAuth } from "../../context/AuthContext";
 import { LoginForm } from "../../components";
 
 // Utils & assets
+import { dashboardPaths } from "../../constants";
 import "./LoginPage.scss";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const { login } = useAuth();
 
   const handleLogin = (username: string, password: string) => {
     login(username, password);
+    navigate(dashboardPaths.navigate.users);
   };
 
   return (
