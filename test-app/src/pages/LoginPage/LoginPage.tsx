@@ -1,3 +1,9 @@
+// React & libraries
+import { useContext } from "react";
+
+// Store & hooks
+import { useAuth } from "../../context/AuthContext";
+
 // Components
 import { LoginForm } from "../../components";
 
@@ -5,8 +11,10 @@ import { LoginForm } from "../../components";
 import "./LoginPage.scss";
 
 const LoginPage = () => {
+  const { login } = useAuth();
+
   const handleLogin = (username: string, password: string) => {
-    console.log(username, password);
+    login(username, password);
   };
 
   return (
