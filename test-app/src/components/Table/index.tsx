@@ -1,6 +1,9 @@
 // React & libraries
 import { useState, useMemo } from "react";
 
+// Store & hooks
+import { useSortedUsers } from "../../hooks";
+
 // Constants & types
 import { User, SortConfig, SortDirection, Role } from "../../types";
 
@@ -18,34 +21,7 @@ const Table = ({ data, role }: Props) => {
     direction: SortDirection.None,
   });
 
-  const sortedData = useMemo(() => {
-    if (!sortConfig.key || sortConfig.direction === SortDirection.None)
-      return data;
-
-    return [...data].sort((a, b) => {
-      let aValue: any = a[sortConfig.key!];
-      let bValue: any = b[sortConfig.key!];
-
-      if (sortConfig.key === "address") {
-        aValue = a.address.city;
-        bValue = b.address.city;
-      } else if (sortConfig.key === "company") {
-        aValue = a.company.name;
-        bValue = b.company.name;
-      }
-
-      const aStr = String(aValue).toLowerCase();
-      const bStr = String(bValue).toLowerCase();
-
-      if (aStr < bStr) {
-        return sortConfig.direction === SortDirection.Asc ? -1 : 1;
-      }
-      if (aStr > bStr) {
-        return sortConfig.direction === SortDirection.Asc ? 1 : -1;
-      }
-      return 0;
-    });
-  }, [data, sortConfig]);
+  const sortedData = useSortedUsers(data, sortConfig);
 
   const handleSort = (key: keyof User) => {
     let direction: SortDirection = SortDirection.Asc;

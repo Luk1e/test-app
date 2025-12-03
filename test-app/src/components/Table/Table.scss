@@ -27,6 +27,11 @@
           letter-spacing: 0.5px;
           position: relative;
 
+          &:first-child {
+            width: 80px;
+            min-width: 80px;
+          }
+
           &.sortable {
             cursor: pointer;
             user-select: none;
@@ -63,6 +68,15 @@
           padding: 1rem;
           color: #4a5568;
           font-size: 0.95rem;
+
+          &:first-child {
+            width: 80px;
+            min-width: 80px;
+          }
+
+          &:last-child {
+            white-space: nowrap;
+          }
 
           &.email-cell {
             max-width: 200px;
