@@ -11,6 +11,7 @@ A modern, responsive React dashboard application featuring a sortable data table
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation & Running Guide](#installation-running-guide)
+- [Usage](#usage)
 - [Author](#author)
 
 ## ✨ Features
@@ -72,6 +73,11 @@ Or with yarn:
 ```bash
 yarn start
 ```
+
+## Usage
+
+- Editor: include "editor" in the username to get Editor privileges (e.g., editor_jane)
+- Viewer: any username without "editor" gets Viewer access
 
 ## Author: Luka Gogiashvili
 
