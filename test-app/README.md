@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# User Dashboard with Sortable Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React dashboard application featuring a sortable data table with role-based access control, search functionality and user management capabilities.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+**[View Live Demo](https://test.com)**
 
-### `npm start`
+## 📋 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation & Running Guide](#installation-running-guide)
+- [Author](#author)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- 🔐 **Authentication System** - Role-based access control (Viewer/Editor)
+- 📊 **Sortable Table** - Multi-column sorting with ascending, descending, and default states
+- 🔍 **Search Functionality** - Real-time filtering across multiple user fields
+- 📱 **Responsive Design** - Mobile-friendly layout with horizontal scrolling
+- 🎨 **Modern UI** - Gradient headers, smooth transitions, and hover effects
+- ⚡ **Performance Optimized** - Memoized sorting and filtering
+- 🛠️ **Action Buttons** - Edit and delete functionality (Editor role only)
+- 📈 **User Statistics** - Display of total and filtered user counts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- **React** 18+ with TypeScript
+- **React Router** - Navigation and routing
+- **SCSS** - Styling with nested syntax
+- **Context API** - Authentication state management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation & Running Guide
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📋 Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** (v14.0.0 or higher)
+- **npm** (v6.0.0 or higher) or **yarn** (v1.22.0 or higher)
 
-### `npm run eject`
+### Step 1: Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/Luk1e/test-app.git
+cd test-app
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Or download the ZIP file and extract it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Step 2: Install Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Using npm:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Using yarn:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn install
+```
+
+### Step 3: Start the development server
+
+```bash
+npm start
+```
+
+Or with yarn:
+
+```bash
+yarn start
+```
+
+## Author: Luka Gogiashvili
+
+#### Email: luka.gogiashvili.02@gmail.com
+
+#### GitHub: https://github.com/Luk1e
