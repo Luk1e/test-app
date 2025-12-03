@@ -1,3 +1,6 @@
+// React & libraries
+import { Navigate } from "react-router-dom";
+
 // Pages
 import { DashBoardPage, ErrorPage } from "../../pages";
 
@@ -9,6 +12,7 @@ import { dashboardPaths, rootPaths } from "../../constants";
 
 const privateRoutes = {
   children: [
+    { index: true, element: <Navigate to={dashboardPaths.navigate.users} /> },
     {
       path: dashboardPaths.basePath,
       element: <RequireAuth />,

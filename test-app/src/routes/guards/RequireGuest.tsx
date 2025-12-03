@@ -5,13 +5,13 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 // Constants & types
-import { errorPaths } from "../../constants";
+import { dashboardPaths } from "../../constants";
 
 const RequireGuest = () => {
   const { isAuthenticated } = useAuth();
 
   if (isAuthenticated) {
-    return <Navigate to={errorPaths.navigate.notFound} replace />;
+    return <Navigate to={dashboardPaths.navigate.users} replace />;
   }
 
   return <Outlet />;

@@ -1,1 +1,1 @@
-export const API_BASE_URL = "test";
+export const API_BASE_URL = "https://jsonplaceholder.typicode.com/";
